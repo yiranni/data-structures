@@ -19,6 +19,11 @@ var strings = thisHTML.split('<br />');
 for (var i = 0; i<strings.length; i++) {
     if(i === 2) {
         console.log(strings[i]);
-        console.log('******');
+    }
+    else if(i === 3) {
+        console.log(strings[i]);
+    }
+    else if(i === 4) {
+        console.log(strings[i]);
     }
 }                    

@@ -11,20 +11,21 @@ var content = fs.readFileSync('/home/ec2-user/environment/data-structures/data/m
 // load `content` into a cheerio object
 var $ = cheerio.load(content);
 
-// write the project titles to a text file
-var m05Titles = ''; // this variable will hold the lines of text
 
-$('h4').each(function(i, elem) {
-    m05Titles += ($(elem).text()).trim() + '\n';
+// write the project titles to a text file
+var m05meetingAddress = ''; // this variable will hold the lines of text
+
+$('td').each(function(i, elem) {
+    $('h4').remove();
+    if($(elem).attr('style') === "border-bottom:1px solid #e3e3e3; width:260px") {
+        m05meetingAddress += ($(elem).text()).trim() + '\n' + '\n';
+    };
+    $('span').replaceWith(function(i, elem) {
+        return '';
+    });
+    $(' .detailsBox').remove();
 });
 
-fs.writeFileSync('/home/ec2-user/environment/data-structures/data/m05Titles.txt', m05Titles);
+m05meetingAddress = m05meetingAddress.replace(/\t/g,'');
+fs.writeFileSync('/home/ec2-user/environment/data-structures/data/m05meetingAddress.txt', m05meetingAddress);
 
-// var strings = thisHTML.split('<br />');
-
-// for (var i = 0; i<strings.length; i++) {
-//     if(i === 2) {
-//         console.log(strings[i]);
-//         console.log('******');
-//     }
-// }  

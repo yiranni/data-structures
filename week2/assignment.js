@@ -12,20 +12,22 @@ var content = fs.readFileSync('/home/ec2-user/environment/data-structures/data/m
 var $ = cheerio.load(content);
 
 
-// write the project titles to a text file
+// write the addresses to a text file
 var m05meetingAddress = ''; // this variable will hold the lines of text
 
+// find 'td' tag
 $('td').each(function(i, elem) {
-    $('h4').remove();
+    // remove spacings for address
     if($(elem).attr('style') === "border-bottom:1px solid #e3e3e3; width:260px") {
         m05meetingAddress += ($(elem).text()).trim() + '\n' + '\n';
     };
-    $('span').replaceWith(function(i, elem) {
-        return '';
-    });
+    // remove elements in 'span' tag ands ' .detailsBox' classes
+    
+    $('span').remove();
     $(' .detailsBox').remove();
 });
 
+// remove extra spaces in text file and write the text file to '/home/ec2-user/environment/data-structures/data/m05meetingAddress.txt'
 m05meetingAddress = m05meetingAddress.replace(/\t/g,'');
 fs.writeFileSync('/home/ec2-user/environment/data-structures/data/m05meetingAddress.txt', m05meetingAddress);
 

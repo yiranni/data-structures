@@ -1,6 +1,7 @@
 # Extract addresses in m05.txt file and write it into m05MeetingAddress.txt
 For this exercise, I will be analyzing data from [New York Intergroup Meeting List Agenda](https://parsons.nyc/aa/m05.html). <br />
-The website contains a list of address/location in the form of a table. (See example below) <br />
+The website contains a list of address/location in the form of a table. <br />
+![alt text](https://github.com/yiranni/data-structures/blob/master/week2/data-screenshot.png)
 ## Data Parser
 ### `cheerio`- load file
 I will be using `cheerio`, a jQuery implementation to load content in the text previously saved in [data/m05.txt](https://github.com/yiranni/data-structures/blob/master/data/m05.txt). <br />

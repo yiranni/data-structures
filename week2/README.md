@@ -14,7 +14,7 @@ var content = fs.readFileSync('/home/ec2-user/environment/data-structures/data/m
 var $ = cheerio.load(content);
 ```
 ### Find Adresses
-According to the html file, addresses are saved in `td` tag. Below is twp sets of sample data.
+According to the html file, addresses are saved in `td` tag. Below are two sets of sample data.
 ```
 <td style="border-bottom:1px solid #e3e3e3; width:260px" valign="top">
     <h4 style="margin:0;padding:0;">Soldiers, Sailors, Marines & Airmen's Club</h4><br />

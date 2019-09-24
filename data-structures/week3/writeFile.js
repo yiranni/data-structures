@@ -34,4 +34,4 @@ for(var i = 0; i < data.length; i++) {
 
 
 // write data(array) to a text file
-fs.writeFileSync('/home/ec2-user/environment/data-structures/data/m05meetingAddress.txt_latLong', JSON.stringify(addressArry));
+fs.writeFileSync('/home/ec2-user/environment/data-structures/data/m05meetingAddress-latlong.json', JSON.stringify(addressArry));

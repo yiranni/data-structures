@@ -7,33 +7,11 @@ var db_credentials = new Object();
 db_credentials.user = 'yiranni';
 db_credentials.host = 'data-structures.cowtwtgreshm.us-east-1.rds.amazonaws.com';
 db_credentials.database = 'aa';
-// db_credentials.password = process.env.AWSRDS_PW;
-db_credentials.password = "Niyiran971022!";
+db_credentials.password = process.env.AWSRDS_PW;
+
 
 db_credentials.port = 5432;
 
-// const path = '/home/ec2-user/environment/data-structures/data/m05meetingAddress-latlong.json';
-// var allData = undefined;
-// fs.readFile(path, 'utf-8', function(err, data) {
-//     if (err) { 
-//         console.log('cannot read json');
-//         callback(err, null); 
-//     } else {
-//         allData = JSON.parse(rawData);
-//     }
-// })
-
-// async.eachSeries(allData, function(value, callback) {
-//     const client = new Client(db_credentials);
-//     client.connect();
-
-//     var thisQuery = "INSERT INTO aalocations VALUES (E'" + value.address + "', " + value.latLong.lat + ", " + value.latLong.lng + ");";
-//     client.query(thisQuery, (err, res) => {
-//         console.log(err, res);
-//         client.end();
-//     });
-//     setTimeout(callback, 1000); 
-// }); 
 
 var allAddressesData = fs.readFileSync('/home/ec2-user/environment/data-structures/week4/data/AA-data-m05.json');
 var allAddresses = JSON.parse(allAddressesData)

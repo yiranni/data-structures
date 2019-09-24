@@ -5,8 +5,8 @@ var db_credentials = new Object();
 db_credentials.user = 'yiranni';
 db_credentials.host = 'data-structures.cowtwtgreshm.us-east-1.rds.amazonaws.com';
 db_credentials.database = 'aa';
-// db_credentials.password = process.env.AWSRDS_PW;
-db_credentials.password = "Niyiran971022!";
+db_credentials.password = process.env.AWSRDS_PW;
+
 
 db_credentials.port = 5432;
 

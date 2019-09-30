@@ -3,14 +3,14 @@ For this exercise, I will focus on practicing NoSQL database with [DynamoDB serv
 The data I will be using is from [BWF(Badminton World Federation)](https://aws.amazon.com/dynamodb/) and I will create a database table with information related to BWF tournaments.
 ## Data Overview
 BWF records all tournaments on its site and displays data in the following format.
-![bwf-events](https://github.com/yiranni/data-structures/blob/master/data-structures/week5/bwf-events.png)
+![bwf-events](https://github.com/yiranni/data-structures/blob/master/data-structures/week5/bwf-events.png) <br />
 It also records winners of each tournament in 5 events (Men's Singles, Women's Singles, Men's Doubles, Women's Doubles, Mixed Doubles).
-![winners](https://github.com/yiranni/data-structures/blob/master/data-structures/week5/bwf-winners.png)
+![winners](https://github.com/yiranni/data-structures/blob/master/data-structures/week5/bwf-winners.png) <br />
 I will gather information of both tournaments and winners from the site and write it into NoSQL database.
 
 ## Process
 ### Create Dynamodb Table
-![create table](https://github.com/yiranni/data-structures/blob/master/data-structures/week5/dynamodb-create.png)
+![create table](https://github.com/yiranni/data-structures/blob/master/data-structures/week5/dynamodb-create.png) <br />
 I created a table called `bwftournaments` with **Partition Key** of `tournament` and **Sort Key** of `beginDate`.
 ### Construct Class for Storing Items
 ```
@@ -70,4 +70,4 @@ async.eachSeries(blogEntries, function(day, callback) {
 
 
 ## DynamoDB Output
-![output](https://github.com/yiranni/data-structures/blob/master/data-structures/week5/dynamodb-output.png)
+![output](https://github.com/yiranni/data-structures/blob/master/data-structures/week5/dynamodb-output.png) <br />

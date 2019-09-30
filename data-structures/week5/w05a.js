@@ -11,8 +11,6 @@ var blogEntries = [];
 
 class BlogEntry {
   constructor(tournament, beginDate, endDate, country, city, grade, category, winners) {
-    // this.pk = {};
-    // this.pk.N = primaryKey.toString();
     this.tournament = {}; // partition key
     this.tournament.S = tournament;
     this.beginDate = {}; // sort key
@@ -44,13 +42,13 @@ class BlogEntry {
   }
 }
 
+// push data into blogEntries
 blogEntries.push(new BlogEntry('Thailand Masters','January 9 2018', 'January 14 2018', 'Thailand', 'Bangkok', 2, 'BWF World Tour Super 300', ['Tommy SUGIARTO', 'Nitchaon JINDAPOL', 'Tinn ISRIYANET & Kittisak NAMDASH', 'Jongkolphan KITITHARAKUL & Rawinda PRAJONGJAI', 'CHAN Peng Soon & GOH Liu Ying']));
 blogEntries.push(new BlogEntry('China Masters','April 10 2018', 'April 15 2018', 'China', 'Ling Shui', 2, 'BWF World Tour Super 100', ['LIN Yu Hsien', 'LI Xue Rui', 'HAN Cheng Kai & ZHOU Hao Dong', 'DU Yue & LI Yin Hui', 'GUO Xin Wa & LIU Xuan Xuan']));
 blogEntries.push(new BlogEntry('TOTAL BWF World Championships','June 30 2018', 'August 5 2018', 'China', 'Nanjing', 1, 'World Championships', ['Kento MOMOTA', 'Carolina MARIN', 'LI Jun Hui & LIU Yu Chen', 'Mayu MATSUMOTO & Wakana NAGAHARA', 'ZHENG Si Wei & HUANG Ya Qiong']));
 
-console.log(blogEntries);
 
-
+// add data into DynamoDB
 var params = {};
 var i;
 for (i = 0; i < blogEntries.length; i++) {

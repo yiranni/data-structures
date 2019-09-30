@@ -20,7 +20,7 @@ If I want to find information of all winners in China Masters in all years, it w
 #### Data Structure
 **title**: *string*. This stores the tournament name displays on the site. e.g. **Lingshui China Masters 2018** <br />
 **tournament**: *string*. This stores the general name. e.g. **Lingshui China Master 2018** will be stored as **China Masters** <br />
-**beginDate**: *num* <br /> (Partition Key)
+**beginDate**: *num* (Partition Key)<br /> 
 **endDate**: *num* <br />
 **beginYear**: *num* <br />
 **endYear**: *num* <br />

@@ -99,3 +99,6 @@ async.eachSeries(blogEntries, function(day, callback) {
 
 ## DynamoDB Output
 ![output](https://github.com/yiranni/data-structures/blob/master/data-structures/week5/img/output.png) <br />
+
+## Future Plan
+I will parse data from BWF site HTML and input all information into database.

@@ -1,4 +1,4 @@
-# Week 4 
+# Week 4 -  SQL 
 With the [previous data](https://github.com/yiranni/data-structures/blob/master/data-structures/week4/data/AA-data-m05.json) parsed from [New York Intergroup Meeting Data in zone 5](https://parsons.nyc/aa/m05.html)
 and [Texas A&M GeoServices](http://geoservices.tamu.edu/Services/Geocode/WebService/) API, I will focus on writing the data to a relational database.
 

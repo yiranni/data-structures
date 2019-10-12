@@ -10,7 +10,7 @@ The meeting data parsed in [Data Parsing](https://github.com/yiranni/data-struct
 
 ### Create PostgreSQL Table
 In order to store all data of AA Meeting in zone 5, I created a PostgreSQL Table `meeting` with following information
-```
+```ruby
 var query = ""
 query += "CREATE TABLE meeting (\
                                 id serial PRIMARY KEY,\
@@ -31,13 +31,13 @@ query += "CREATE TABLE meeting (\
 ### Insert Values Into Table
 With the PostgreSQL table created in the previous process, I added data from [m05.json](https://github.com/yiranni/data-structures/blob/master/data-structures/week6/data/m05.json) into the table by
 
-```
+```ruby
  var thisQuery = "INSERT INTO meeting VALUES (DEFAULT, '" + value.zone + "', '" + value.group + "', '" + value.address + "', '"+ value.locations + "', '" + value.latitude + "', '" + value.longitude + "', '" + value.accessibility + "', '"+value.day + "', '" + value.beginTime + "', '" + value.endTime + "', '" + value.meetingType + "', '" + value.specialInterest + "');";
 ```
 
 ### Check Table
 To check the PostgreSQL table, I checked the result by selecting all meetings on Mondays with the meeting type of C.
-```
+```ruby
 SELECT day, beginTime, endTime, locations, address, meetingType FROM meeting WHERE day = 'Mondays' and meetingType = 'C';
 ```
 ![postgresql sample output](https://github.com/yiranni/data-structures/blob/master/data-structures/week6/img/aameeting05.png)

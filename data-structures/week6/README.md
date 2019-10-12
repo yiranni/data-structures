@@ -46,7 +46,8 @@ SELECT day, beginTime, endTime, locations, address, meetingType FROM meeting WHE
 ## Dear Diary
 ### Creat NoSQL Table
 Created a NoSQL table with 3 values: **category** which defines what type of diary this is, **date** which is the  written date, and **entry** which writes down details of the diary.
-```class DiaryEntry {
+```ruby
+  class DiaryEntry {
   constructor(category, date, entry) {
     this.category = {};
     this.category.S = category;
@@ -60,7 +61,8 @@ Created a NoSQL table with 3 values: **category** which defines what type of dia
 
 ### Query Table
 With the NoSQL table previously created, I queried the data of all diaries related to `badminton` in `2019`.
-```var params = {
+```ruby
+    var params = {
     TableName : "deardiary",
     KeyConditionExpression: "#tp = :categoryName and #dt between :minDate and :maxDate",// the query expression
     ExpressionAttributeNames: { // name substitution, used for reserved words in DynamoDB

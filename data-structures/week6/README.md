@@ -64,10 +64,9 @@ With the NoSQL table previously created, I queried the data of all diaries relat
 ```ruby
     var params = {
     TableName : "deardiary",
-    KeyConditionExpression: "#tp = :categoryName and #dt between :minDate and :maxDate",// the query expression
+    KeyConditionExpression: "#tp = :categoryName",// the query expression
     ExpressionAttributeNames: { // name substitution, used for reserved words in DynamoDB
-        "#tp" : "category",
-        "#dt" : "date"
+        "#tp" : "category"
     },
     ExpressionAttributeValues: { // the query values
         ":categoryName": {S: "badminton"},
@@ -76,3 +75,4 @@ With the NoSQL table previously created, I queried the data of all diaries relat
     }
 };
 ```
+![deardiary output](https://github.com/yiranni/data-structures/blob/master/data-structures/week6/img/deardiaryoutput.png)

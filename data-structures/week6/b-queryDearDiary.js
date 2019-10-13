@@ -6,15 +6,12 @@ var dynamodb = new AWS.DynamoDB();
 
 var params = {
     TableName : "deardiary",
-    KeyConditionExpression: "#tp = :categoryName and #dt between :minDate and :maxDate",// the query expression
+    KeyConditionExpression: "#tp = :categoryName", // the query expression
     ExpressionAttributeNames: { // name substitution, used for reserved words in DynamoDB
         "#tp" : "category",
-        "#dt" : "date"
     },
     ExpressionAttributeValues: { // the query values
         ":categoryName": {S: "badminton"},
-        ":minDate": {S: new Date("January 1, 2019").toISOString()},
-        ":maxDate": {S: new Date("December 31, 2019").toISOString()}
     }
 };
 

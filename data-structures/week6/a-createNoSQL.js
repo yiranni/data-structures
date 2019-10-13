@@ -12,7 +12,7 @@ class DiaryEntry {
     this.category = {};
     this.category.S = category;
     this.date = {}; 
-    this.date.S = new Date(date).toISOString()
+    this.date.S = new Date(date).toLocaleString()
     this.entry = {};
     this.entry.S = entry;
   }

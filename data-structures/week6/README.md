@@ -75,4 +75,4 @@ With the NoSQL table previously created, I queried the data of all diaries relat
     }
 };
 ```
-![deardiary output](https://github.com/yiranni/data-structures/blob/master/data-structures/week6/img/deardiaryoutput.png)
+![deardiary output](https://github.com/yiranni/data-structures/blob/master/data-structures/week6/img/deardiary.png)

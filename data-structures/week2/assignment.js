@@ -43,5 +43,5 @@ console.log(meetingData);
 // console.log(meetingData.length);
 
 
-// fs.writeFileSync('/home/ec2-user/environment/data-structures/data/m05meetingAddress.txt', JSON.stringify(meetingData));
+// fs.writeFileSync('/home/ec2-user/environment/data-structures/week7/data/m05meetingAddress.txt', JSON.stringify(meetingData));
 

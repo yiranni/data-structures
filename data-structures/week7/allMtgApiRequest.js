@@ -18,9 +18,6 @@ async.eachSeries(mtgs, function(ele, callback) {
     for (var i = 0; i < thisZoneGroups.length; i++) {
         thisZoneAddresses.push(thisZoneGroups[i].address)
     }
-    // comment out to check address for each zone
-    // console.log("zone" + ele.zone)
-    // console.log(thisZoneAddresses.length)
 
     var thisZoneGeocodes = []
     
@@ -44,9 +41,6 @@ async.eachSeries(mtgs, function(ele, callback) {
         console.log('Number of meetings in zone' + ele.zone);
         console.log(thisZoneGeocodes.length);
         console.log('************');
-        // for(var i = 0; i < meetingsData.length; i++) {
-        // console.log(meetingsData[i].InputAddress);
-        // }
     });
     
     setTimeout(callback, 10000)

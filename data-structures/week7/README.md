@@ -2,7 +2,7 @@
 Based on previous process of creating PostgreSQL for [AA Meeting in zone 5](https://parsons.nyc/aa/m05.html), I will parse data from all 10 zones and create PostgreSQL for all meetings in all zones.
 ## Planning
 I decided to create **3** tables, including zone, group, and meeting. <br />
-![schema](https://github.com/yiranni/data-structures/tree/master/data-structures/week7/img/RDS.png)
+![schema](https://github.com/yiranni/data-structures/blob/master/data-structures/week7/img/RDS.png)
 
 ## Data Parse
 In Week 1, I downloaded HTML files of each meeting zone and stored these files [here](https://github.com/yiranni/data-structures/tree/master/data-structures/data). In order to dynamically find relevant information in each zone, I first add html text files into an array.
@@ -172,7 +172,7 @@ async.eachSeries(allmtgs, function(value, callback) {
 
 });
 ```
-![zone](https://github.com/yiranni/data-structures/tree/master/data-structures/week7/img/tableZone.png)
+![zone](https://github.com/yiranni/data-structures/blob/master/data-structures/week7/img/tableZone.png)
 
 
 #### GROUP
@@ -221,7 +221,7 @@ async function execute() {
 
 execute();
 ```
-![group](https://github.com/yiranni/data-structures/tree/master/data-structures/week7/img/tableGroup.png)
+![group](https://github.com/yiranni/data-structures/blob/master/data-structures/week7/img/tableGroup.png)
 
 #### MEETING
 Inserting meetings is the most complicated because meeting data is stored in the most inner layer, it is also required to combine data in this layer and outside. <br />
@@ -269,7 +269,7 @@ async function getZone/GroupId(zoneName) {
 
 ```
 
-![meeting](https://github.com/yiranni/data-structures/tree/master/data-structures/week7/img/tableMeeting.png)
+![meeting](https://github.com/yiranni/data-structures/blob/master/data-structures/week7/img/tableMeeting.png)
 
 
 

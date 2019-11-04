@@ -1,0 +1,14 @@
+{
+  "name": "week9",
+  "version": "1.0.0",
+  "description": "In this exercise, I will focus on collecting temperature data by using temperature sensor and [Particle](https://www.particle.io/) Photon. With data collected, I will write data into ProgreSQL table.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.88.0"
+  }
+}

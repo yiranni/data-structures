@@ -9,7 +9,7 @@ var db_credentials = new Object();
 db_credentials.user = 'yiranni';
 db_credentials.host = 'aameeting.cowtwtgreshm.us-east-1.rds.amazonaws.com';
 db_credentials.database = 'aa';
-db_credentials.password = process.env.AWSRDS_PW;;
+db_credentials.password = process.env.AWSRDS_PW;
 db_credentials.port = 5432;
 
 const allmtgs = JSON.parse(fs.readFileSync('/home/ec2-user/environment/data-structures/week7/data/allmeetings.json'));

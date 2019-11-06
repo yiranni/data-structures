@@ -55,9 +55,9 @@ In order to constantly get data from API and run scripts in the background, I us
 and  initializee a configuration file with:
 `pm2 init`
 
-I will be collecting data from the sensor in every 30 minutes, so I set a time interval with
+I will be collecting data from the sensor in every 5 minutes, so I set a time interval with
 ```ruby
-setInterval(getAndWriteData, 1800000);
+setInterval(getAndWriteData, 30000);
 ```
 
 ## SAMPLE RESULTS

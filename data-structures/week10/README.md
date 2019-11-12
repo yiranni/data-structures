@@ -5,9 +5,9 @@ The website is consisted of four pages:
 - Landing Page
 - ![landing page](https://github.com/yiranni/data-structures/tree/master/data-structures/week10/img/landingpage.png)
 - Process Blog (Dear Diary)
-- ![process blog](https://github.com/yiranni/data-structures/tree/master/data-structures/week10/img/processblog.png)
+- ![process blog](https://github.com/yiranni/data-structures/blob/master/data-structures/week10/img/processblog.png)
 - AA Meeting
-- ![aa meeting](https://github.com/yiranni/data-structures/tree/master/data-structures/week10/img/aameeting.png)
+- ![aa meeting](https://github.com/yiranni/data-structures/blob/master/data-structures/week10/img/aameeting.png)
 - Temp Sensor
 - ![temp sensor](https://github.com/yiranni/data-structures/tree/master/data-structures/week10/img/tempsensor.png)
 

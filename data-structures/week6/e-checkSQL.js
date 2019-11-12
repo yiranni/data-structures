@@ -15,7 +15,7 @@ client.connect();
 
 
 client
-    .query("SELECT day, beginTime, endTime, locations, address, meetingType FROM meeting WHERE day = 'Mondays' and meetingType = 'C';", (err, res) => {
+   .query("SELECT day, time_begin, time_end, location_name, address, meeting_type FROM meeting WHERE day = 'Mondays' and meeting_type = 'C';", (err, res) => {
     if(err) {throw err}
     console.table(res.rows);
     client.end();

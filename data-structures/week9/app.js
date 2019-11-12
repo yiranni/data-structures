@@ -8,12 +8,16 @@ const name = "tempsensor";
 const accessToken = process.env.ACCESS_TOKEN;
 const fullUrl = `${baseUrl}/${deviceID}/${name}?access_token=${accessToken}`;
 
+
 let db_credentials = new Object();
 db_credentials.user = 'yiranni';
 db_credentials.host = process.env.DB_HOST;
 db_credentials.database = 'tempsensor';
 db_credentials.password = process.env.DB_PASS;
 db_credentials.port = 5432;
+
+const client = new Client(db_credentials);
+client.connect();
 
 const getAndWriteData = async () => {
 
@@ -33,14 +37,12 @@ const getAndWriteData = async () => {
             cmd = result.cmd;
             name = result.name;
             temp = result.result;
-            timeStamp = result.coreInfo.last_heard;
+            
+            timeStamp = result.coreInfo.last_heard;;
             console.log(`new data logged at ${timeStamp}, temp is ${temp}`);
         } catch (e) {
             console.log("cannot parse data:", e);
         }
-        
-        const client = new Client(db_credentials);
-        client.connect();
 
         const q = "insert into sensordata(cmd, name, result, sensortime) values ($1, $2, $3, $4);";
         const args = [cmd, name, temp, timeStamp];
@@ -59,6 +61,6 @@ const getAndWriteData = async () => {
     });
 };
 
-// get data every 30 minutes
+// get data every 5 minutes
 setInterval(getAndWriteData, 30000);
-// setInterval(getAndWriteData, 5000);
+// setInterval(getAndWriteData, 1000);

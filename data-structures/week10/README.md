@@ -13,6 +13,12 @@ The website is consisted of four pages:
 
 
 
+### Sketch
+![process blog sketch](https://github.com/yiranni/data-structures/blob/master/data-structures/week10/img/sketch-diary.png) </br>
+![aa meeting sketch](https://github.com/yiranni/data-structures/blob/master/data-structures/week10/img/sketch-meeting.png) </br>
+![temp sensor sketch](https://github.com/yiranni/data-structures/blob/master/data-structures/week10/img/sketch-temp.png) </br>
+
+
 
 
 

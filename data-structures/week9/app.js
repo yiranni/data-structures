@@ -62,5 +62,5 @@ const getAndWriteData = async () => {
 };
 
 // get data every 5 minutes
-setInterval(getAndWriteData, 30000);
+setInterval(getAndWriteData, 300000);
 // setInterval(getAndWriteData, 1000);

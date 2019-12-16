@@ -1,0 +1,27 @@
+{
+  "name": "middleware",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.2",
+    "@types/pg": "^7.11.2",
+    "eslint": "^6.7.2",
+    "typescript": "^3.7.3"
+  },
+  "dependencies": {
+    "@types/dotenv": "^8.2.0",
+    "aws-sdk": "^2.588.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "handlebars": "^4.5.3",
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.27",
+    "pg": "^7.14.0"
+  }
+}
